@@ -1,0 +1,22 @@
+:root {
+  /* 배경컬러 */
+  --bg-primary: #f7f8ff;
+  --bg-secondary: #eaeeff;
+  --bg-blue: #3f75ff;
+  --bg-black: #282828;
+  --bg-white: #ffffff;
+  --bg-red: #d82f35;
+  --bg-grey: #bbbecc;
+
+  /* 카드컬러 */
+  --card-korea: #8b0029;
+  --card-kyungbuk: #da2127;
+
+  /* 폰트컬러 */
+  --font-gray-heavy: #8c8f99;
+  --font-gray-light: #bbbecc;
+  --font-blue: #3f75ff;
+  --font-white: #ffffff;
+  --font-black: #282828;
+  --font-black-light: #515151;
+}
