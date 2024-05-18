@@ -1,15 +1,16 @@
-import React from 'react'
-import { Map, MapMarker } from 'react-kakao-maps-sdk'
+// import { useState } from "react";
+import { Map, CustomOverlayMap } from 'react-kakao-maps-sdk'
+import styles from './KakaoMap.module.css'
 
 export default function KakaoMap() {
   return (
     <Map
-      center={{ lat: 37.5665, lng: 126.978 }}
+      center={{ lat: 33.450701, lng: 126.570667 }}
       style={{ width: '100%', height: '400px' }}
     >
-      <MapMarker position={{ lat: 37.5665, lng: 126.978 }}>
-        <div style={{ color: '#000' }}>Hello, World!</div>
-      </MapMarker>
+      <CustomOverlayMap position={{ lat: 33.450701, lng: 126.570667 }}>
+        <div className={styles.customMarker}></div>
+      </CustomOverlayMap>
     </Map>
   )
 }
