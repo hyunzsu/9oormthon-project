@@ -30,3 +30,25 @@
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 }
+
+.button {
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 9999px;
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  box-shadow: 0 0 8px #00000025;
+  z-index: 1;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.button:hover {
+  background-color: #6f00d6;
+}
