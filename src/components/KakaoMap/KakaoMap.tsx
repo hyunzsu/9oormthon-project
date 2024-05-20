@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Map, CustomOverlayMap } from 'react-kakao-maps-sdk'
+import { Map, CustomOverlayMap, MapMarker } from 'react-kakao-maps-sdk'
 import styles from './KakaoMap.module.css'
 
 export default function KakaoMap() {
@@ -31,6 +31,14 @@ export default function KakaoMap() {
     }
   }
 
+  // 지도 클릭 시 호출되는 함수
+  const handleMapClick = (target, mouseEvent) => {
+    const latlng = MouseEvent.latLng
+    setState({
+      center: { lat: latlng.getLat(), lng: latlng.getLng() },
+    })
+  }
+
   return (
     <>
       <Map
@@ -38,15 +46,22 @@ export default function KakaoMap() {
         isPanto={state.isPanto}
         style={{ width: '100%', height: '400px' }}
         level={3}
+        onClick={handleMapClick}
       >
-        <CustomOverlayMap position={state.center}>
+        {/* <CustomOverlayMap position={state.center}>
           <div className={styles.customMarker}></div>
-        </CustomOverlayMap>
+        </CustomOverlayMap> */}
+        <MapMarker position={state.center} />
       </Map>
 
       <button className={styles.button} onClick={moveToCurrentLocation}>
         현재
       </button>
+
+      <div>
+        {state &&
+          `클릭한 위치의 위도는 ${state.center.lat} 이고, 경도는 ${state.center.lng} 입니다`}
+      </div>
     </>
   )
 }
