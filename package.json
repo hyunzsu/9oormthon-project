@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "ai": "^3.1.12",
+    "axios": "^1.7.0",
+    "openai": "^4.47.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-kakao-maps-sdk": "^1.1.26",
